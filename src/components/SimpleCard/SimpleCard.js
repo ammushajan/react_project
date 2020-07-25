@@ -25,6 +25,10 @@ const useStyles = makeStyles({
   displayCard: {
     display: "flex",
   },
+  icon:
+  {
+    marginRight:"0px"
+  }
 });
 
 export default function SimpleCard() {
@@ -47,7 +51,7 @@ export default function SimpleCard() {
               marginRight: "15px",
             }}
           >
-            <MoneyIcon></MoneyIcon>
+            <MoneyIcon className={classes.icon}></MoneyIcon>
           </Avatar>
           <div className={classes. displayCard}>
              <ArrowDownwardIcon fontSize="small"></ArrowDownwardIcon>
@@ -70,7 +74,7 @@ export default function SimpleCard() {
               marginRight: "15px",
             }}
           >
-            <GroupIcon></GroupIcon>
+            <GroupIcon className={classes.icon}></GroupIcon>
           </Avatar>
           <div className={classes. displayCard}>
              <ArrowUpwardIcon fontSize="small"></ArrowUpwardIcon>
@@ -93,7 +97,7 @@ export default function SimpleCard() {
               marginRight: "15px",
             }}
           >
-            <PollIcon></PollIcon>
+            <PollIcon className={classes.icon}></PollIcon>
           </Avatar>
           <LinearDeterminate></LinearDeterminate>
         </CardContent>
@@ -113,7 +117,7 @@ export default function SimpleCard() {
               color: "#0000cd",
             }}
           >
-            <AttachMoneyIcon></AttachMoneyIcon>
+            <AttachMoneyIcon className={classes.icon}></AttachMoneyIcon>
           </Avatar>
         </CardContent>
       </Card>
