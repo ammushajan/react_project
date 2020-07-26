@@ -4,8 +4,11 @@ export const ToolBarSection = styled.section`
   height: 50px;
   background-color: #0000cd;
   color: white;
+  /* @media (min-width: 1024px) {
+    width: 1307px;
+  } */
   /* @media (min-width: 768px) {
-    width: 1301px;
+    width: 1307px;
   } */
 `;
 export const ToolBarIcon = styled.section`

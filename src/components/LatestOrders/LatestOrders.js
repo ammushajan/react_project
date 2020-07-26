@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/Table";
 import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
 import { green } from '@material-ui/core/colors';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 export default class LatestOrders extends Component {
   state = {
     series: [
@@ -36,7 +37,9 @@ export default class LatestOrders extends Component {
             <tr>
               <th>Order</th>
               <th>Customer</th>
-              <th>Date</th>
+              <th><span>Date</span>
+              <ArrowDownwardIcon fontSize="small"></ArrowDownwardIcon>
+              </th>
               <th>Status</th>
             </tr>
           </TableHeading>
