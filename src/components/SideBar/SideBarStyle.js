@@ -10,6 +10,12 @@ export const UserInfo = styled.div`
 `;
 export const UserInfoDashboard = styled.div`
   width: 15%;
+  @media (min-width: 1440px) {
+    width: 18%;
+  }
+  @media (min-width: 1024px) {
+    width: 12%;
+  }
 `;
 
 export const Border = styled.div`
@@ -18,6 +24,9 @@ export const Border = styled.div`
 
 export const Explore = styled.div`
   padding: 20px;
+  @media (min-width: 768px) {
+    padding:9px
+  }
 `;
 export const ExploreDiv = styled.div`
   display: flex;
@@ -44,4 +53,8 @@ export const UpgradeButton = styled.button`
   font-size: 12px;
   padding: 7px 11px;
   margin: 5px;
+  @media (min-width: 768px) {
+    padding: 4px 9px;
+     margin: 0px;
+  }
 `;

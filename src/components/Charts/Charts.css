@@ -2,3 +2,27 @@
 {
     display: none;
 }
+.btn-success
+{
+    color:black;
+    background-color: white;
+    border-color:white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.btn-success:not(:disabled):not(.disabled).active, .btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color:black;
+    background-color: white;
+    border-color:white;
+}
+.show>.btn-success.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem white;
+}
+.btn-success:hover
+{
+    color:black;
+    background-color: white;
+    border-color:white;
+    font-size: 14px;
+    font-weight: bold;
+}

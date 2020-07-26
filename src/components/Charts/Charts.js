@@ -11,7 +11,7 @@ import {
   UsersDevice,
   PercentageBlue,
   PercentageRed,
-  PercentageYellow
+  PercentageYellow,
 } from "./ChartStyle";
 import Barchart from "../Barchart";
 import PieChart from "../PieChart";
@@ -21,6 +21,8 @@ import RefreshIcon from "@material-ui/icons/Refresh";
 import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import TabletAndroidIcon from "@material-ui/icons/TabletAndroid";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
+import GroupedSelect from "../Selection/GroupedSelect";
+import Dropdown from "react-bootstrap/Dropdown";
 import "./Charts.css";
 export default class Charts extends Component {
   state = {
@@ -34,6 +36,7 @@ export default class Charts extends Component {
         data: [76, 85, 101, 98, 87, 105],
       },
     ],
+    donutSeries: [63, 15, 23],
   };
   render() {
     return (
@@ -42,8 +45,19 @@ export default class Charts extends Component {
           <LatestSalesTitle>
             <h6>LatestSales</h6>
             <Duration>
-              <h6>LAST 7 DAYS</h6>
-              <ArrowDropDownIcon></ArrowDropDownIcon>
+              <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                LAST 7 DAYS
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <Dropdown.Item href="#/action-1">LAST 7 DAYS</Dropdown.Item>
+                  <Dropdown.Item href="#/action-2">
+                  LAST 14 DAYS
+                  </Dropdown.Item>
+                  
+                </Dropdown.Menu>
+              </Dropdown>
             </Duration>
           </LatestSalesTitle>
 
@@ -64,7 +78,7 @@ export default class Charts extends Component {
           </LatestSalesTitle>
           <Border></Border>
           <PieChart
-            series={[63, 15, 23]}
+            series={this.state.donutSeries}
             color={["rgb(69,80,178)", "rgb(229,46,51)", "rgb(227,144,45)"]}
           />
 
@@ -72,17 +86,17 @@ export default class Charts extends Component {
             <UsersDevice>
               <DesktopMacIcon fontSize="small"></DesktopMacIcon>
               <h6>Desktop</h6>
-              <PercentageBlue>63%</PercentageBlue>
+              <PercentageBlue>{this.state.donutSeries[0]}%</PercentageBlue>
             </UsersDevice>
             <UsersDevice>
               <TabletAndroidIcon fontSize="small"></TabletAndroidIcon>
               <h6>Tablet</h6>
-              < PercentageRed>15%</ PercentageRed>
+              <PercentageRed>{this.state.donutSeries[1]}%</PercentageRed>
             </UsersDevice>
             <UsersDevice>
               <PhoneIphoneIcon fontSize="small"></PhoneIphoneIcon>
               <h6>Mobile</h6>
-              <PercentageYellow>23%</PercentageYellow>
+              <PercentageYellow>{this.state.donutSeries[2]}%</PercentageYellow>
             </UsersDevice>
           </Device>
         </UsersByDevice>

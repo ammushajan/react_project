@@ -18,8 +18,8 @@ export default function GroupedSelect() {
       <FormControl className={classes.formControl}>
         <Select native defaultValue="" id="grouped-native-select">
 
-            <option value={1}>Option 1</option>
-            <option value={2}>Option 2</option>
+            <option value={1}>LAST 7 DAYS</option>
+            <option value={2}>LAST 1 MONTH</option>
        
         </Select>
       </FormControl>
