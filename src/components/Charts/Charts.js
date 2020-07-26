@@ -15,13 +15,12 @@ import {
 } from "./ChartStyle";
 import Barchart from "../Barchart";
 import PieChart from "../PieChart";
-import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
 import RefreshIcon from "@material-ui/icons/Refresh";
 import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import TabletAndroidIcon from "@material-ui/icons/TabletAndroid";
 import PhoneIphoneIcon from "@material-ui/icons/PhoneIphone";
-import GroupedSelect from "../Selection/GroupedSelect";
+
 import Dropdown from "react-bootstrap/Dropdown";
 import "./Charts.css";
 export default class Charts extends Component {
@@ -47,15 +46,12 @@ export default class Charts extends Component {
             <Duration>
               <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
-                LAST 7 DAYS
+                  LAST 7 DAYS
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
                   <Dropdown.Item href="#/action-1">LAST 7 DAYS</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                  LAST 14 DAYS
-                  </Dropdown.Item>
-                  
+                  <Dropdown.Item href="#/action-2">LAST 14 DAYS</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>
             </Duration>

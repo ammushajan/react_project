@@ -16,6 +16,9 @@ export const UserInfoDashboard = styled.div`
   @media (min-width: 1024px) {
     width: 12%;
   }
+  @media (min-width: 425px) {
+    width: 32%;
+  }
 `;
 
 export const Border = styled.div`
@@ -26,6 +29,9 @@ export const Explore = styled.div`
   padding: 20px;
   @media (min-width: 768px) {
     padding:9px
+  }
+  @media (min-width: 425px) {
+    padding:11px
   }
 `;
 export const ExploreDiv = styled.div`

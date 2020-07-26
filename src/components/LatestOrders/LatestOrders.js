@@ -3,10 +3,27 @@ import {
   LatestOrdersSection,
   Button,
   LatestOrdersTitle,
+  TableHeading,
 } from "./LatestOrdersStyle";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/Table";
+import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import { green } from '@material-ui/core/colors';
 export default class LatestOrders extends Component {
+  state = {
+    series: [
+      {
+        name: "Net Profit",
+        data: [44, 55, 57, 56, 61, 58],
+      },
+      {
+        name: "Revenue",
+        data: [76, 85, 101, 98, 87, 105],
+      },
+    ],
+    donutSeries: [63, 15, 23],
+  };
+
   render() {
     return (
       <LatestOrdersSection>
@@ -15,28 +32,34 @@ export default class LatestOrders extends Component {
           <Button>NEW ENTRY</Button>
         </LatestOrdersTitle>
         <Table responsive>
-          <thead>
+          <TableHeading>
             <tr>
               <th>Order</th>
               <th>Customer</th>
               <th>Date</th>
               <th>Status</th>
             </tr>
-          </thead>
-          <tbody>
+          </TableHeading>
+          <TableHeading>
             <tr>
               <td>CD01049</td>
               <td>Ekaterina Tankova</td>
               <td>12/04/2019</td>
-              <td>pending</td>
+              <td>
+                <FiberManualRecordIcon fontSize="small" style={{ color: green[500] }}></FiberManualRecordIcon>
+                <span>pending</span>
+              </td>
             </tr>
             <tr>
               <td>CD01046</td>
               <td>Cao Yu</td>
               <td>12/04/2019</td>
-              <td>delivered</td>
+              <td>
+              <FiberManualRecordIcon fontSize="small" ></FiberManualRecordIcon>
+              <span>delievered</span>
+              </td>
             </tr>
-          </tbody>
+          </TableHeading>
         </Table>
       </LatestOrdersSection>
     );
