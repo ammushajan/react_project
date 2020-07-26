@@ -6,6 +6,9 @@ import {
   Border,
   Explore,
   ExploreDiv,
+  Upgrade,
+  UpgradeImg,
+  UpgradeButton,
 } from "./SideBarStyle";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import GroupIcon from "@material-ui/icons/Group";
@@ -20,7 +23,6 @@ import "./SideBar.css";
 export default function SideBar() {
   return (
     <UserInfoDashboard>
-
       <UserInfo>
         <UserImg
           src={require("../assets/images/user_info.jpg")}
@@ -34,39 +36,47 @@ export default function SideBar() {
 
       <Explore>
         <ExploreDiv>
-          <DashboardIcon></DashboardIcon>
+          <DashboardIcon fontSize="small"></DashboardIcon>
           <p>Dashboard</p>
         </ExploreDiv>
         <ExploreDiv>
-          <GroupIcon></GroupIcon>
+          <GroupIcon fontSize="small"></GroupIcon>
           <p>Users</p>
         </ExploreDiv>
         <ExploreDiv>
-          <ShoppingBasketIcon></ShoppingBasketIcon>
+          <ShoppingBasketIcon fontSize="small"></ShoppingBasketIcon>
           <p>Products</p>
         </ExploreDiv>
         <ExploreDiv>
-          <LockOpenIcon></LockOpenIcon>
+          <LockOpenIcon fontSize="small"></LockOpenIcon>
           <p>Authentication</p>
         </ExploreDiv>
         <ExploreDiv>
-          <TextFieldsIcon></TextFieldsIcon>
+          <TextFieldsIcon fontSize="small"></TextFieldsIcon>
           <p>Typography</p>
         </ExploreDiv>
         <ExploreDiv>
-          <ImageIcon></ImageIcon>
+          <ImageIcon fontSize="small"></ImageIcon>
           <p>Icons</p>
         </ExploreDiv>
         <ExploreDiv>
-          <AccountBoxIcon></AccountBoxIcon>
+          <AccountBoxIcon fontSize="small"></AccountBoxIcon>
           <p>Account</p>
         </ExploreDiv>
         <ExploreDiv>
-          <SettingsIcon></SettingsIcon>
+          <SettingsIcon fontSize="small"></SettingsIcon>
           <p>Settings</p>
         </ExploreDiv>
       </Explore>
-
+      <Upgrade>
+        <UpgradeImg
+          src={require("../assets/images/upgrade.jpg")}
+          alt="Upgrade Image"
+        ></UpgradeImg>
+        <h6>Upgrade to PRO</h6>
+        <p>Upgrade to get more components</p>
+        <UpgradeButton>UPGRADE</UpgradeButton>
+      </Upgrade>
     </UserInfoDashboard>
   );
 }

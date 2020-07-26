@@ -17,10 +17,31 @@ export const Border = styled.div`
 `;
 
 export const Explore = styled.div`
-  padding:20px;
+  padding: 20px;
 `;
 export const ExploreDiv = styled.div`
-  display:flex;
-  padding:10px;
+  display: flex;
+  padding: 10px;
+`;
+export const Upgrade = styled.div`
+  background-color: #f5f7fa;
+  text-align: center;
+  padding: 15px;
+  margin: 10px;
 `;
 
+export const UpgradeImg = styled.img`
+  width: 50px;
+  height: 50px;
+  margin:10px;
+`;
+
+export const UpgradeButton = styled.button`
+  color: white;
+  background-color: #0000cd;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 7px 11px;
+  margin: 5px;
+`;

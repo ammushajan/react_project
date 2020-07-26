@@ -13,7 +13,7 @@ export default function PieChart(props) {
 		plotOptions: {
 			pie: {
 				donut: {
-					size: '90%',
+					size: '85%',
 					background: 'transparent',
 				}
 			}

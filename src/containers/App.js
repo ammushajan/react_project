@@ -3,6 +3,7 @@ import ToolBar from "../components/ToolBar/ToolBar";
 import SideBar from "../components/SideBar/SideBar"
 import DashBoard from "../components/DashBoard/DashBoard"
 import {UserContribution} from "../components/style"
+import GroupedSelect from "./GroupedSelect";
 import "./App.css"
 export default class App extends Component {
   
@@ -14,7 +15,7 @@ export default class App extends Component {
         <SideBar></SideBar>
         <DashBoard></DashBoard>
         </UserContribution>
-
+        {/* <GroupedSelect></GroupedSelect> */}
         
       </div>
     );

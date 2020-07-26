@@ -30,5 +30,20 @@ export const UsersByDevice = styled.section`
 export const Device = styled.section`
   display:flex;
   justify-content:space-around;
-  padding:20px;
+  padding: 25px 50px;
+`;
+
+export const UsersDevice = styled.div`
+ text-align:center;
+`;
+export const PercentageBlue = styled.h5`
+ color: rgb(69,80,178);
+`;
+
+export const PercentageRed = styled.h5`
+ color: rgb(229,46,51);
+`;
+
+export const PercentageYellow = styled.h5`
+ color: rgb(227,144,45);
 `;

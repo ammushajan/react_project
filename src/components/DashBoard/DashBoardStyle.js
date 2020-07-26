@@ -6,6 +6,7 @@ export const DashBoardSection = styled.section`
 `;
 export const ProductTableSection = styled.section`
   display:flex;
-  
+  margin:10px;
 `;
+
 

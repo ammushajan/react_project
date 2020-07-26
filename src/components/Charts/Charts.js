@@ -7,7 +7,11 @@ import {
   Overview,
   UsersByDevice,
   ChartSession,
-  Device
+  Device,
+  UsersDevice,
+  PercentageBlue,
+  PercentageRed,
+  PercentageYellow
 } from "./ChartStyle";
 import Barchart from "../Barchart";
 import PieChart from "../PieChart";
@@ -65,21 +69,21 @@ export default class Charts extends Component {
           />
 
           <Device>
-            <div>
-              <DesktopMacIcon></DesktopMacIcon>
+            <UsersDevice>
+              <DesktopMacIcon fontSize="small"></DesktopMacIcon>
               <h6>Desktop</h6>
-              <h5>63%</h5>
-            </div>
-            <div>
-              <TabletAndroidIcon></TabletAndroidIcon>
+              <PercentageBlue>63%</PercentageBlue>
+            </UsersDevice>
+            <UsersDevice>
+              <TabletAndroidIcon fontSize="small"></TabletAndroidIcon>
               <h6>Tablet</h6>
-              <h5>15%</h5>
-            </div>
-            <div>
-              <PhoneIphoneIcon></PhoneIphoneIcon>
+              < PercentageRed>15%</ PercentageRed>
+            </UsersDevice>
+            <UsersDevice>
+              <PhoneIphoneIcon fontSize="small"></PhoneIphoneIcon>
               <h6>Mobile</h6>
-              <h5>23%</h5>
-            </div>
+              <PercentageYellow>23%</PercentageYellow>
+            </UsersDevice>
           </Device>
         </UsersByDevice>
       </ChartSession>

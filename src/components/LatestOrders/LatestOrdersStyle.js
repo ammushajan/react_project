@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const LatestOrdersSection = styled.section`
   background-color:white;
-  width:70%;
+  width:72%;
   margin:8px;
 `;
 export const Button = styled.button`

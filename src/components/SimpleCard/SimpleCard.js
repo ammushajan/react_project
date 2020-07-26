@@ -7,13 +7,13 @@ import Avatar from "@material-ui/core/Avatar";
 import GroupIcon from "@material-ui/icons/Group";
 import PollIcon from "@material-ui/icons/Poll";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
+import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import LinearDeterminate from "./LinearDeterminate";
 import "./SimpleCard.css";
 const useStyles = makeStyles({
   root: {
-    minWidth: 250,
+    minWidth: 270,
     margin: "15px",
   },
   bluecolor: {
@@ -25,10 +25,25 @@ const useStyles = makeStyles({
   displayCard: {
     display: "flex",
   },
-  icon:
+  icon: {
+    marginRight: "0px",
+  },
+  smallFont: {
+    fontSize: "12px",
+  },
+  uparrow: {
+    color: "red",
+  },
+  downarrow: {
+    color: "green",
+  },
+  percentage:
   {
-    marginRight:"0px"
-  }
+    marginTop:"20px",
+    display: "flex",
+    fontSize:"12px",
+    },
+
 });
 
 export default function SimpleCard() {
@@ -39,8 +54,8 @@ export default function SimpleCard() {
     <div className={classes.displayCard}>
       <Card className={classes.root}>
         <CardContent>
-          <h6>BUDGET</h6>
-          <h6>$24000</h6>
+          <h6 className={classes.smallFont}>BUDGET</h6>
+          <h5>$24000</h5>
           <Avatar
             style={{
               backgroundColor: "red",
@@ -53,17 +68,22 @@ export default function SimpleCard() {
           >
             <MoneyIcon className={classes.icon}></MoneyIcon>
           </Avatar>
-          <div className={classes. displayCard}>
-             <ArrowDownwardIcon fontSize="small"></ArrowDownwardIcon>
-             <div>12%</div>
-             <div>Since last Month</div>
+          <div className={classes.percentage}>
+            <div className={classes.uparrow}>
+              <ArrowDownwardIcon
+                fontSize="small"
+                className={classes.icon}
+              ></ArrowDownwardIcon>
+              <span>12%</span>
+            </div>
+            <div>Since last Month</div>
           </div>
         </CardContent>
       </Card>
       <Card className={classes.root}>
         <CardContent>
-          <h6>TOTAL USERS</h6>
-          <h6>1,600</h6>
+          <h6 className={classes.smallFont}>TOTAL USERS</h6>
+          <h5>1,600</h5>
           <Avatar
             style={{
               backgroundColor: "green",
@@ -76,17 +96,22 @@ export default function SimpleCard() {
           >
             <GroupIcon className={classes.icon}></GroupIcon>
           </Avatar>
-          <div className={classes. displayCard}>
-             <ArrowUpwardIcon fontSize="small"></ArrowUpwardIcon>
-             <div>16%</div>
-             <div>Since last Month</div>
+          <div className={classes.percentage}>
+            <div className={classes.downarrow}>
+            <ArrowUpwardIcon
+              fontSize="small"
+              className={classes.icon}
+            ></ArrowUpwardIcon>
+            <span>16%</span>
+            </div>
+            <div>Since last Month</div>
           </div>
         </CardContent>
       </Card>
       <Card className={classes.root}>
         <CardContent>
-          <h6>TASKS PROGRESS</h6>
-          <h6>75.5%</h6>
+          <h6 className={classes.smallFont}>TASKS PROGRESS</h6>
+          <h5>75.5%</h5>
           <Avatar
             style={{
               backgroundColor: "#0000cd",
@@ -99,13 +124,15 @@ export default function SimpleCard() {
           >
             <PollIcon className={classes.icon}></PollIcon>
           </Avatar>
+          <div className={classes.percentage}>
           <LinearDeterminate></LinearDeterminate>
+          </div>
         </CardContent>
       </Card>
       <Card className={classes.bluecolor}>
         <CardContent>
           <h6>BUDGET</h6>
-          <h6>$24000</h6>
+          <h5>$24000</h5>
           <Avatar
             style={{
               backgroundColor: "white",
